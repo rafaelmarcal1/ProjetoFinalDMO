@@ -3,6 +3,17 @@
     <style name="Base.Theme.ProjetoFinalDMO" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/my_primary</item>
+        <item name="colorPrimaryVariant">@color/my_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secundary brand color. -->
+        <item name="colorSecondary">@color/my_secundary</item>
+        <item name="colorSecondaryVariant">@color/my_secundary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/off_white</item>
     </style>
 
     <style name="Theme.ProjetoFinalDMO" parent="Base.Theme.ProjetoFinalDMO" />

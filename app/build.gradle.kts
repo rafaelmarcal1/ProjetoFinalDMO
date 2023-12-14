@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "br.edu.ifsp.dmo.projetofinaldmo"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "br.edu.ifsp.dmo.projetofinaldmo"
