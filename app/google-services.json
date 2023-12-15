@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259901237523",
+    "project_id": "projetofinaldmo-backend",
+    "storage_bucket": "projetofinaldmo-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259901237523:android:cd59039217315dc3ed12e6",
+        "android_client_info": {
+          "package_name": "br.edu.ifsp.dmo.projetofinaldmo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPm9eBn8IHY4XeCATXMnoCDT4Ir8AG1YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
