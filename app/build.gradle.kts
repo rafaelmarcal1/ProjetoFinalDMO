@@ -45,5 +45,6 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-auth")
     implementation ("com.google.firebase:firebase-auth:latest_version")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
 
 }
