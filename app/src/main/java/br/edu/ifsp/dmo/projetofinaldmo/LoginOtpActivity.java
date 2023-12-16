@@ -158,16 +158,3 @@ public class LoginOtpActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

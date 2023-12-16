@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:hint="username"
-            android:inputType="number"
+            android:inputType="text"
             android:maxLength="6"
             android:layout_margin="10dp"
             android:background="@drawable/edit_text_rounded_corner"
