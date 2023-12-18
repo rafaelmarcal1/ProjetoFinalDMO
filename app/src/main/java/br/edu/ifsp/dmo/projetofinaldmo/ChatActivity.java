@@ -2,6 +2,7 @@ package br.edu.ifsp.dmo.projetofinaldmo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -11,11 +12,15 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.Query;
 
+import br.edu.ifsp.dmo.projetofinaldmo.adapter.ChatRecyclerAdapter;
+import br.edu.ifsp.dmo.projetofinaldmo.adapter.SearchUserRecyclerAdapter;
 import br.edu.ifsp.dmo.projetofinaldmo.model.ChatMessageModel;
 import br.edu.ifsp.dmo.projetofinaldmo.model.ChatroomModel;
 import br.edu.ifsp.dmo.projetofinaldmo.model.UserModel;
@@ -27,6 +32,7 @@ public class ChatActivity extends AppCompatActivity {
     UserModel otherUser;
     String chatroomId;
     ChatroomModel chatroomModel;
+    ChatRecyclerAdapter adapter;
 
     EditText messageInput;
     ImageButton sendMessageBtn;
@@ -81,6 +87,22 @@ public class ChatActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+        getOrCreateChatroomModel();
+        setupChatRecyclerView();
+    }
+
+    void setupChatRecyclerView(){
+        Query query = FirebaseUtil.getChatroomMessageReference(chatroomId)
+                .orderBy("timestamp", Query.Direction.DESCENDING);
+
+        FirestoreRecyclerOptions<ChatMessageModel> options = new FirestoreRecyclerOptions.Builder<ChatMessageModel>()
+                .setQuery(query, ChatMessageModel.class).build();
+
+        adapter = new ChatRecyclerAdapter(options, getApplicationContext());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
     }
     void getOrCreateChatroomModel(){
         FirebaseUtil.getChatroomReference(chatroomId).get().addOnCompleteListener(task -> {
