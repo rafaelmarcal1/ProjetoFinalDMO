@@ -2,4 +2,31 @@
     <string name="app_name">ProjetoFinalDMO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="write_message_here">Escreva uma Mensagem\n</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="enter_otp_sent_to_your_number">Informe o OTP enviado para o seu numero</string>
+    <string name="next">PROXIMO</string>
+    <string name="resend_otp_in_30_sec">Reenviar OTP em 30 segundos</string>
+    <string name="mobile">Telefone</string>
+    <string name="Login_1">1</string>
+    <string name="Login_2">2</string>
+    <string name="Login_3">3</string>
+    <string name="enter_mobile_number">Informe seu numero de telefone</string>
+    <string name="send_opt">Enviar Otp</string>
+    <string name="enter_your_username">Informe seu Username</string>
+    <string name="login_username">username</string>
+    <string name="let_me_in">Entrar</string>
+    <string name="buscar_usuario">Buscar Usuario</string>
+    <string name="search_username">Buscar</string>
+    <string name="developed_by_rafael_mar_al">Developed By Rafael Marçal</string>
+    <string name="chat_screen">Tela de Chat</string>
+    <string name="profile_screen">Tela de Perfil</string>
+    <string name="user_name">Nome de Isuario</string>
+    <string name="_000000000000">+000000000000</string>
+    <string name="chats">Chats</string>
+    <string name="profile">Perfil</string>
+    <string name="otp">OTP</string>
 </resources>

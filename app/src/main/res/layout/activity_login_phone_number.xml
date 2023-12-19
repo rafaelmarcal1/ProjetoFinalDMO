@@ -8,7 +8,7 @@
     android:gravity="center"
     android:layout_margin="20dp"
     android:weightSum="100"
-    tools:context=".LoginPhoneNumberActivity">
+    tools:context=".view.LoginPhoneNumberActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_centerInParent="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:text="1"/>
+                android:text="@string/Login_1"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="32dp"
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="2"
+                android:text="@string/Login_2"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
@@ -56,7 +56,7 @@
                 android:layout_centerInParent="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:text="3"/>
+                android:text="@string/Login_3"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -71,7 +71,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter mobile number"
+        android:text="@string/enter_mobile_number"
         android:layout_gravity="center_vertical"
         android:letterSpacing="0.08"
         android:textStyle="bold"
@@ -96,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:hint="Mobile"
+            android:hint="@string/mobile"
             android:inputType="phone"
             android:layout_margin="10dp"
             android:background="@drawable/edit_text_rounded_corner"
@@ -117,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
-            android:text="Send opt" />
+            android:text="@string/send_opt" />
         <ProgressBar
             android:layout_width="32sp"
             android:layout_height="wrap_content"

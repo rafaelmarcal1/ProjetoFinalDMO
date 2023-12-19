@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,10 +14,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.ktx.Firebase;
 
+import br.edu.ifsp.dmo.projetofinaldmo.R;
 import br.edu.ifsp.dmo.projetofinaldmo.model.UserModel;
 import br.edu.ifsp.dmo.projetofinaldmo.utils.FirebaseUtil;
+
+/*Este código é para a atividade LoginUsernameActivity em um aplicativo Android, que lida com a entrada do nome de usuário do usuário após a autenticação OTP. */
 
 public class LoginUsernameActivity extends AppCompatActivity {
 
@@ -62,7 +64,7 @@ public class LoginUsernameActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 setInProgress(false);
                 if (task.isSuccessful()){
-                    Intent intent = new Intent(LoginUsernameActivity.this,MainActivity.class);
+                    Intent intent = new Intent(LoginUsernameActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }

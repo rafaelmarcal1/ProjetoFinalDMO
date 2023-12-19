@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,16 +19,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.ktx.Firebase;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
+import br.edu.ifsp.dmo.projetofinaldmo.R;
 import br.edu.ifsp.dmo.projetofinaldmo.utils.AndroidUtil;
+
+/*Este código é para a atividade LoginOtpActivity em um aplicativo Android, que lida com a
+autenticação por meio de OTP (One-Time Password). Vamos analisar as principais partes do código:*/
 
 public class LoginOtpActivity extends AppCompatActivity {
 

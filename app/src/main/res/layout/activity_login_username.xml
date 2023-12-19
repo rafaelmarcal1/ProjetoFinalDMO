@@ -8,7 +8,7 @@
     android:gravity="center"
     android:layout_margin="20dp"
     android:weightSum="100"
-    tools:context=".LoginUsernameActivity">
+    tools:context=".view.LoginUsernameActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Your Username"
+        android:text="@string/enter_your_username"
         android:layout_gravity="center_vertical"
         android:letterSpacing="0.08"
         android:textStyle="bold"
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:hint="username"
+            android:hint="@string/login_username"
             android:inputType="text"
             android:maxLength="6"
             android:layout_margin="10dp"
@@ -110,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
-            android:text="Let me in"
+            android:text="@string/let_me_in"
             android:id="@+id/login_let_me_in_btn"/>
         <ProgressBar
             android:layout_width="32sp"

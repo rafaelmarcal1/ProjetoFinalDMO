@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,10 @@ import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import br.edu.ifsp.dmo.projetofinaldmo.R;
+
+/*Este código é para a atividade MainActivity em um aplicativo Android, que representa a tela principal do aplicativo.*/
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         searchButton = findViewById(R.id.main_search_btn);
 
         searchButton.setOnClickListener((v)->{
-            startActivity(new Intent(MainActivity.this,SearchUserActivity.class));
+            startActivity(new Intent(MainActivity.this, SearchUserActivity.class));
         });
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

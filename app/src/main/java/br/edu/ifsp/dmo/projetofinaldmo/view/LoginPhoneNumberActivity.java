@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.hbb20.CountryCodePicker;
+
+import br.edu.ifsp.dmo.projetofinaldmo.R;
+
+/*Este código é para a atividade LoginPhoneNumberActivity em um aplicativo Android, que lida com
+a entrada do número de telefone do usuário para autenticação. */
 
 public class LoginPhoneNumberActivity extends AppCompatActivity {
 
@@ -36,7 +41,7 @@ public class LoginPhoneNumberActivity extends AppCompatActivity {
                 phoneInput.setError("Phone number not valid");
                 return;
             }
-            Intent intent = new Intent(LoginPhoneNumberActivity.this,LoginOtpActivity.class);
+            Intent intent = new Intent(LoginPhoneNumberActivity.this, LoginOtpActivity.class);
             intent.putExtra("phone",countryCodePicker.getFullNumberWithPlus());
             startActivity(intent);
         });

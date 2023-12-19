@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchUserActivity">
+    tools:context=".view.SearchUserActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Buscar Usuario"
+            android:text="@string/buscar_usuario"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -54,7 +54,7 @@
             android:layout_toLeftOf="@+id/search_user_btn"
             android:background="@drawable/edit_text_rounded_corner"
             android:elevation="4dp"
-            android:hint="Username"
+            android:hint="@string/search_username"
             android:padding="10dp" />
         <ImageButton
             android:layout_width="40dp"

@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,9 +10,13 @@ import android.widget.ImageButton;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.Query;
 
+import br.edu.ifsp.dmo.projetofinaldmo.R;
 import br.edu.ifsp.dmo.projetofinaldmo.adapter.SearchUserRecyclerAdapter;
 import br.edu.ifsp.dmo.projetofinaldmo.model.UserModel;
 import br.edu.ifsp.dmo.projetofinaldmo.utils.FirebaseUtil;
+
+/*Este código é para a atividade SearchUserActivity em um aplicativo Android, que permite aos
+usuários pesquisar outros usuários por nome de usuário.*/
 
 public class SearchUserActivity extends AppCompatActivity {
 

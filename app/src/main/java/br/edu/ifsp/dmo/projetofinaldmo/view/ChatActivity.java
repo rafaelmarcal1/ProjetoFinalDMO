@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.projetofinaldmo;
+package br.edu.ifsp.dmo.projetofinaldmo.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,7 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.Query;
 
+import br.edu.ifsp.dmo.projetofinaldmo.R;
 import br.edu.ifsp.dmo.projetofinaldmo.adapter.ChatRecyclerAdapter;
 import br.edu.ifsp.dmo.projetofinaldmo.adapter.SearchUserRecyclerAdapter;
 import br.edu.ifsp.dmo.projetofinaldmo.model.ChatMessageModel;
@@ -27,8 +28,15 @@ import br.edu.ifsp.dmo.projetofinaldmo.model.UserModel;
 import br.edu.ifsp.dmo.projetofinaldmo.utils.AndroidUtil;
 import br.edu.ifsp.dmo.projetofinaldmo.utils.FirebaseUtil;
 
+/*Esse é um código para uma atividade (Activity) em um aplicativo Android que implementa um chat entre usuários.*/
+
 public class ChatActivity extends AppCompatActivity {
 
+    /*A classe tem atributos para representar o usuário com quem o usuário atual
+    está conversando (otherUser), o ID da sala de chat (chatroomId), o modelo da sala
+    de chat (chatroomModel), um adaptador para o RecyclerView (adapter), e referências
+    a elementos de interface do usuário como campos de entrada de mensagem, botões e o
+    RecyclerView.*/
     UserModel otherUser;
     String chatroomId;
     ChatroomModel chatroomModel;
@@ -70,6 +78,9 @@ public class ChatActivity extends AppCompatActivity {
         getOrCreateChatroomModel();
     }
 
+    /*Este método é chamado quando o usuário clica no botão de enviar mensagem.
+    Ele configura o modelo da sala de chat com os detalhes da última mensagem e a envia para o
+    Firestore. Além disso, adiciona a mensagem ao Firestore e atualiza o RecyclerView.*/
     void sendMessageToUser(String message){
 
         chatroomModel.setLastMessageTimestamp(Timestamp.now());
@@ -92,6 +103,10 @@ public class ChatActivity extends AppCompatActivity {
         setupChatRecyclerView();
     }
 
+    /*Este método configura o RecyclerView para exibir as mensagens da sala de chat. Ele utiliza
+    o Firebase Firestore para obter as mensagens e um adaptador personalizado (ChatRecyclerAdapter)
+    para exibi-las.
+     */
     void setupChatRecyclerView(){
         Query query = FirebaseUtil.getChatroomMessageReference(chatroomId)
                 .orderBy("timestamp", Query.Direction.DESCENDING);
@@ -104,6 +119,9 @@ public class ChatActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
+
+    /*Este método obtém ou cria o modelo da sala de chat no Firestore. Se a sala de chat não existir, ela é criada pela primeira vez.
+     */
     void getOrCreateChatroomModel(){
         FirebaseUtil.getChatroomReference(chatroomId).get().addOnCompleteListener(task -> {
             if(task.isSuccessful()){
